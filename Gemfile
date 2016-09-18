@@ -30,6 +30,7 @@ gem 'react-rails'
 gem "browserify-rails"
 
 gem 'will_paginate', '~> 3.1.0'
+gem 'httparty', '~> 0.14.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
