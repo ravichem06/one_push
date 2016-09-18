@@ -3,12 +3,59 @@
 	      <div class="nav-wrapper">
 	        <a href="#!" class="brand-logo" style="padding-left:20px;"><i class="material-icons">cloud</i>OnePush</a>
 	        <ul class="right hide-on-med-and-down">
-	          <li><a href="sass.html">Sass</a></li>
-	          <li><a href="badges.html">Components</a></li>
+	         <div class="search-result">
+	          <li class="grey-text" style="padding-right: 25px;">A total of <%= @websites.count %> websites found</li>
+	         </div>
+	         <div class="Contribute">
+	         	<li style="padding-right: 25px;"><button data-target="modal1" class="btn modal-trigger" >Contribute a Website</button></li>
+	         </div>
 	        </ul>
 	      </div>
 	    </nav>
-	  </div>  
+	  </div>
+
+	  <!-- Contribute modal -->
+
+  <div id="modal1" class="modal">
+    <div class="row">
+
+      <div class=" center" style="margin-top: 35px;" ><h3 class="header">Contribute or Add a Website</h3></div>
+      <div class="container">
+       <div class="row">
+		    <form class="col s12">
+		      <div class="row">
+		        <div class="input-field col s12">
+		          <input id="title" type="text" class="validate">
+		          <label for="title">Title</label>
+		        </div>
+		      </div>
+		      
+		      <div class="row">
+		        <div class="input-field col s12">
+		          <input id="web_url" type="text" class="validate">
+		          <label for="web_url">Website Url</label>
+		        </div>
+		      </div>
+		      <div class="row">
+		        <div class="input-field col s12">
+		          <input id="tag" type="text" class="validate">
+		          <label for="tag">Tag</label>
+		        </div>
+		      </div>
+		    </form>
+		  </div>
+     </div>
+    </div>
+
+    
+  </div>
+
+  <!-- Modalend -->
+
+
+
+
+
 	  <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
@@ -16,10 +63,11 @@
         
         <div class="row center">
           <div class="row">
-		        <div class="input-field col s12 valign-wrapper" style="    margin-top: 300px;">
+          <div class="header teal-text" style="margin-top: 280px;"><h2 class="text-teal">Search for your favourite websites</h2></div>
+		        <div class="input-field col s12 valign-wrapper" style="margin-top: 20px;">
 		          <i class="material-icons prefix">search</i>
-		          <input type="text" id="autocomplete-input" class="autocomplete valign">
-		          <label for="autocomplete-input" style="font-size: 32px;"" >Search for your favourite websites</label>
+		          <input type="text" id="autocomplete-input" class="autocomplete">
+		          <label for="autocomplete-input" style="font-size: 32px;"></label>
 		        </div>
 		      </div>
         </div>
@@ -38,7 +86,7 @@
       <div class="row">
 
         <div class="col s12 m12">
-			    <h2 class="header">Horizontal Card</h2>
+			    <!-- <h2 class="header">Horizontal Card</h2> -->
 			    <% @websites.each do |f| %>
 			    <div class="card horizontal" >
 			      <div class="card-image">
@@ -46,7 +94,7 @@
 			      </div>
 			      <div class="card-stacked">
 			        <div class="card-content">
-			          <p><%= f['title'] %></p>
+			          <h1><%= f['title'].capitalize %></h1>
 			        </div>
 			        <div class="card-action">
 			          <%= link_to "Visit Website", f['url_address'], class: "waves-effect waves-light btn" %>
