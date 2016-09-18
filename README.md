@@ -1,24 +1,11 @@
-# README
+Live demo of the project: https://glacial-waters-70645.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Instruction to setting up the project
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1.	Build with ROR
+2.	Clone the repo
+3.	Run `cd one_push`
+4.	Run `bundle install`
+5.	Run `npm install`
+6.	Run `rails s`
+7.	Open browser and type `localhost:3000` to access the portal.
