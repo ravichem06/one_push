@@ -1,4 +1,4 @@
-Live demo of the project: https://glacial-waters-70645.herokuapp.com/
+
 
 Instruction to setting up the project
 
